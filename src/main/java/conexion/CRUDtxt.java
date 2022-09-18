@@ -14,7 +14,10 @@ public class CRUDtxt {
 
     // CRUD ------------------------------
 
-    // Create --------------------------------
+    /**CREATE
+     * 
+     * @param usuarioNuevo
+     */
     public void Escribir(Usuarios usuarioNuevo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("parchaditos.txt", true))) {
             // .exists() es un método de la clase file que nos permite comprobar la
@@ -29,7 +32,10 @@ public class CRUDtxt {
         }
     }
 
-    // Read ------------------------------
+    /**READ
+     * 
+     * @return
+     */
     public LinkedList<Usuarios> obtener() {
         // Se incerta el nombre del archivo que se requiere conectar
         LinkedList<Usuarios> UsuarioNuevo = null;
@@ -52,7 +58,10 @@ public class CRUDtxt {
         return UsuarioNuevo;
     }
 
-    // Update --------------------------------
+    /**UPDATE
+     * 
+     * @param UsuarioxActualizar
+     */
     public void Update(Usuarios UsuarioxActualizar) {
 
         // File necesario para hacer el rename al final de esta función
@@ -101,7 +110,10 @@ public class CRUDtxt {
         }
     }
 
-    // Delete --------------------------------
+    /**DELETE
+     * 
+     * @param UsuarioARemover
+     */
     public void Delete(Usuarios UsuarioARemover) {
 
         // File necesario para hacer el rename al final de esta función

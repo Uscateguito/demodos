@@ -14,7 +14,10 @@ public class Archivotxt {
         this.nombre = nombre;
     }
 
-    // Mete las líneas del archivo en una lista
+    /**
+     * Organiza un archivo de texto dentro de la memoria
+     * @return
+     */
     public LinkedList<String> ObtenerTextodeArchivo() {
         LinkedList<String> lineasDeTexto = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(nombre))) {
@@ -35,6 +38,10 @@ public class Archivotxt {
         return lineasDeTexto;
     }
 
+    /**
+     * Quita todas las líneas que quedan en blanco de un documento txt al hacerle alguna eliminación
+     * @param ArchivoOriginal
+     */
     public static void limpiar(File ArchivoOriginal) {
 
         File ArchivoTemporal = new File("tempFile.txt");

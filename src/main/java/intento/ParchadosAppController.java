@@ -18,7 +18,10 @@ public class ParchadosAppController {
 
     @FXML
     public Text NombreUsuario;
-
+    /**
+     * Vuelve a la pantalla inicial
+     * @param event
+     */
     @FXML
     void Volver(ActionEvent event) {
         try {
@@ -36,6 +39,10 @@ public class ParchadosAppController {
         }
     }
 
+    /**
+     * Sirve para mostrar el nombre del usuario que entró a la app
+     * @param nombre
+     */
     public void mostrarNombre(String nombre){
         NombreUsuario.setText(nombre);
     }
