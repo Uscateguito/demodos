@@ -36,7 +36,6 @@ public class PrimaryController {
     @FXML
     void LogIn(ActionEvent event) throws InfoIncompleta{
         try {
-            FuncionesCuentaParchado.cargarUsuarios();
             if(l.iniciarSesion(CedulaUsuario.getText(), ContraseniaUsuario.getText()) == true){
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("ParchadosApp.fxml"));
                 root = loader.load();

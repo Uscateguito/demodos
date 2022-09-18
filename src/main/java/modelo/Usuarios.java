@@ -1,7 +1,5 @@
 package modelo;
 
-import javafx.scene.text.Text;
-
 public class Usuarios {
     
     private String nombre;

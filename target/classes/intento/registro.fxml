@@ -41,6 +41,6 @@
          </image>
       </ImageView>
       <Button layoutX="414.0" layoutY="322.0" mnemonicParsing="false" onAction="#Volver" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Back to main" />
-      <Text fill="WHITE" layoutX="458.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javerianapp" />
+      <Text fx:id="Notificacion" fill="WHITE" layoutX="334.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javerianapp" textAlignment="CENTER" wrappingWidth="311.0" />
    </children>
 </AnchorPane>

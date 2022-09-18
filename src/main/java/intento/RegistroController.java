@@ -1,7 +1,6 @@
 package intento;
 
-import java.io.IOException;
-
+import controlador.FuncionesCuentaParchado;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +8,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import modelo.Usuarios;
 
 public class RegistroController {
 
@@ -31,6 +32,11 @@ public class RegistroController {
     private TextField nombreUsuario;
 
     @FXML
+    private Text Notificacion;
+
+    FuncionesCuentaParchado l = new FuncionesCuentaParchado();
+
+    @FXML
     void Volver(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
@@ -49,7 +55,14 @@ public class RegistroController {
 
     @FXML
     void registroBoton(ActionEvent event) {
-
+        Usuarios x = l.ObtenerPorCedula(CedulaUsuario.getText());
+        if( x == null && nombreUsuario.getText() != null &&  CedulaUsuario.getText() != null &&
+        CorreoUsuario.getText() != null && ContraseniaUsuario.getText() != null){
+            l.crearUsuario(new Usuarios(nombreUsuario.getText(), CedulaUsuario.getText(), CorreoUsuario.getText(), ContraseniaUsuario.getText()));
+        }else{
+            Notificacion.setText("Por favor llene todos los espacios");
+        }
+        
     }
 
 }

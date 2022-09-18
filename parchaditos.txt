@@ -2,3 +2,4 @@ Jhoseph;2;c2;456
 Erick;3;c3;789
 Sofia;4;c4;145
 Rigoberto;5;jiji;456
+Jose;6;asd;123

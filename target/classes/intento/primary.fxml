@@ -25,6 +25,6 @@
          </font>
       </Text>
       <Button layoutX="407.0" layoutY="336.0" mnemonicParsing="false" onAction="#OlvidoContrasenia" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: #050a30; -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10;" text="¿Olvidaste tu contraseña?" textFill="WHITE" />
-      <Text fx:id="Notificacion" fill="WHITE" layoutX="459.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javerianapp" />
+      <Text fx:id="Notificacion" fill="WHITE" layoutX="340.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javerianapp" textAlignment="CENTER" wrappingWidth="299.0" />
    </children>
 </AnchorPane>
