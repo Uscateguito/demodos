@@ -2,6 +2,8 @@ package intento;
 
 import java.io.IOException;
 
+import controlador.FuncionesCuentaParchado;
+import excepciones.InfoIncompleta;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import modelo.Usuarios;
 
 public class PrimaryController {
 
@@ -28,14 +31,38 @@ public class PrimaryController {
     @FXML
     private Text Notificacion;
 
-    @FXML
-    void LogIn(ActionEvent event) {
+    FuncionesCuentaParchado l = new FuncionesCuentaParchado();
 
+    @FXML
+    void LogIn(ActionEvent event) throws InfoIncompleta{
+        try {
+            FuncionesCuentaParchado.cargarUsuarios();
+            if(l.iniciarSesion(CedulaUsuario.getText(), ContraseniaUsuario.getText()) == true){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ParchadosApp.fxml"));
+                root = loader.load();
+                // Con este objeto puedo ejecutar los métodos del registroController
+                ParchadosAppController controladorDelRegistro = loader.getController();
+                Usuarios usuario = l.ObtenerPorCedula(CedulaUsuario.getText());
+                controladorDelRegistro.mostrarNombre(usuario.getNombre());
+                
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }else{
+                Notificacion.setText("Los datos ingresados no son correctos");
+            }
+        } catch (InfoIncompleta e){
+            Notificacion.setText(e.getMessage());
+        } 
+        catch (Exception e) {
+            Notificacion.setText("Ingresa valores válidos");
+        }
     }
 
     @FXML
     void OlvidoContrasenia(ActionEvent event) {
-
+        // Por trabajar
     }
 
     @FXML
@@ -43,7 +70,7 @@ public class PrimaryController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("registro.fxml"));
         root = loader.load();
         // Con este objeto puedo ejecutar los métodos del registroController
-        RegistroController controladorDelRegistro = loader.getController();
+        //RegistroController controladorDelRegistro = loader.getController();
         
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

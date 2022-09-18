@@ -27,8 +27,8 @@
       </ImageView>
       <TextField fx:id="CedulaUsuario" alignment="CENTER" layoutX="414.0" layoutY="171.0" promptText="Cedula" style="-fx-background-color: #050a30; -fx-text-fill: white; -fx-border-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" />
       <TextField fx:id="ContraseniaUsuario" alignment="CENTER" layoutX="414.0" layoutY="242.0" prefHeight="24.0" prefWidth="151.0" promptText="Contraseña" style="-fx-background-color: #050a30; -fx-text-fill: white; -fx-border-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" />
-      <Button layoutX="414.0" layoutY="319.0" mnemonicParsing="false" onAction="#registroBoton" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Let's go!" />
-      <Text fill="WHITE" layoutX="368.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro" textAlignment="CENTER" wrappingWidth="243.1484375">
+      <Button layoutX="414.0" layoutY="286.0" mnemonicParsing="false" onAction="#registroBoton" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Let's go!" />
+      <Text fill="WHITE" layoutX="368.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro" textAlignment="CENTER" wrappingWidth="243.1484375">
          <font>
             <Font name="Impact" size="36.0" />
          </font>
@@ -40,5 +40,7 @@
             <Image url="@logoParche-removebg-preview.png" />
          </image>
       </ImageView>
+      <Button layoutX="414.0" layoutY="322.0" mnemonicParsing="false" onAction="#Volver" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Back to main" />
+      <Text fill="WHITE" layoutX="458.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javerianapp" />
    </children>
 </AnchorPane>

@@ -21,7 +21,7 @@ public class App extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("primary.fxml"));
             Scene scene = new Scene(root);
-            //scene.getStylesheets().add(getClass().getResource("src/main/resources/Estilos/parchados.css").toExternalForm());
+            //scene.getStylesheets().add(getClass().getResource("parchados.css").toExternalForm());
             String css = this.getClass().getResource("parchados.css").toExternalForm();
             scene.getStylesheets().add(css);
             // primaryStage.getIcons().add(new Image("logoParche.png"));
@@ -38,9 +38,6 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println( "Hello World!" );
-        FuncionesCuentaParchado l = new FuncionesCuentaParchado();
-        l.cargarUsuarios();
         /* l.leer();
         l.crearUsuario(new Usuarios("Juan", "5", "correoElectronico", "contrasenia"));
         l.crearUsuario(new Usuarios("Simon", "6", "correoElectronico", "contrasenia"));

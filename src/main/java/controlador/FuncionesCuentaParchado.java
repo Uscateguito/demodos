@@ -3,17 +3,19 @@ package controlador;
 import java.util.LinkedList;
 
 import conexion.CRUDtxt;
+import excepciones.InfoIncompleta;
 import modelo.Usuarios;
 
 public class FuncionesCuentaParchado {
     
-    private LinkedList<Usuarios> UsuariosParchados;
+    private static LinkedList<Usuarios> UsuariosParchados;
 
     public FuncionesCuentaParchado(LinkedList<Usuarios> usuariosParchados) {
         UsuariosParchados = usuariosParchados;
     }
 
     public FuncionesCuentaParchado() {
+        FuncionesCuentaParchado.cargarUsuarios();
     }
     /**
      * Esta función sirve para agregar un usuario a la base de datos, pero también a la lista
@@ -66,7 +68,7 @@ public class FuncionesCuentaParchado {
         return null;
     }
 
-    public void cargarUsuarios(){
+    public static void cargarUsuarios(){
         CRUDtxt bd = new CRUDtxt();
         UsuariosParchados = bd.obtener();
     }
@@ -78,14 +80,19 @@ public class FuncionesCuentaParchado {
         }
     }
 
-    public boolean iniciarSesion(String cedula, String contrasenia){
+    public boolean iniciarSesion(String cedula, String contrasenia) throws InfoIncompleta{
         // Valida si el usuario existe en el sistema o no
         // El usuario inicia sesión con su cédula y su contraseña
-        Usuarios x = ObtenerPorCedula(cedula);
-        if(x != null && contrasenia == x.getContrasenia()){
+        if( cedula == null || contrasenia == null ){
+            throw new InfoIncompleta("Por favor ingrese un valor en todas las líneas");
+        }else{
+            Usuarios x = ObtenerPorCedula(cedula);
+        if(x != null && contrasenia.equalsIgnoreCase(x.getContrasenia())){
+            System.out.println("Se cumple");
             return true;
         }
         return false;
+        }
     }
 
 
