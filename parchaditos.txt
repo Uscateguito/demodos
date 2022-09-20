@@ -3,3 +3,4 @@ Erick;3;c3;789
 Sofia;4;c4;145
 Rigoberto;5;jiji;456
 Jose;6;asd;123
+Majito;7;c7;1234
