@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -23,7 +24,7 @@ public class App extends Application {
             scene.getStylesheets().add(css);
             primaryStage.sizeToScene();
             // Por algún motivo no es posible cargar el ícono
-            // primaryStage.getIcons().add(new Image("logoParche.png"))
+            //primaryStage.getIcons().add(new Image("logoParche.png"));
             primaryStage.setTitle("Parchados");
             primaryStage.setScene(scene);
             primaryStage.show(); 

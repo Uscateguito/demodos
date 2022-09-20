@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -26,17 +27,17 @@ public class PrimaryController {
     private TextField CedulaUsuario;
 
     @FXML
-    private TextField ContraseniaUsuario;
+    private Text Notificacion;
 
     @FXML
-    private Text Notificacion;
+    private PasswordField ContraseniaUser;
 
     FuncionesCuentaParchado l = new FuncionesCuentaParchado();
 
     @FXML
     void LogIn(ActionEvent event) throws InfoIncompleta{
         try {
-            if(l.iniciarSesion(CedulaUsuario.getText(), ContraseniaUsuario.getText()) == true){
+            if(l.iniciarSesion(CedulaUsuario.getText(), ContraseniaUser.getText()) == true){
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("ParchadosApp.fxml"));
                 root = loader.load();
                 // Con este objeto puedo ejecutar los métodos del registroController

@@ -14,3 +14,14 @@ En cualquier caso las tres funcionalidades de este programa en su primera parte 
 - Registrar nuevo usuario
 
 Es importante aclarar que el programa ya cuenta con el crud completo y que además, implementar 3 funciones más para la segunda entrega es algo viable.
+
+Para ejecutar el .JAR en windows es necesario abrir el cmd e indicar
+
+
+```
+set PATH_TO_FX="path\to\JavaFX\lib"
+```
+
+En mi caso se veía así: 
+
+C:\Program Files\JavaFX\openjfx-18.0.1_windows-x64_bin-sdk\javafx-sdk-18.0.1\lib
