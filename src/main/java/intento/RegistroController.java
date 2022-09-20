@@ -56,8 +56,8 @@ public class RegistroController {
     @FXML
     void registroBoton(ActionEvent event) {
         Usuarios x = l.ObtenerPorCedula(CedulaUsuario.getText());
-        if( x == null && nombreUsuario.getText() != null &&  CedulaUsuario.getText() != null &&
-        CorreoUsuario.getText() != null && ContraseniaUsuario.getText() != null){
+        if( x == null && nombreUsuario.getText() != "" &&  CedulaUsuario.getText() != "" &&
+        CorreoUsuario.getText() != "" && ContraseniaUsuario.getText() != ""){
             l.crearUsuario(new Usuarios(nombreUsuario.getText(), CedulaUsuario.getText(), CorreoUsuario.getText(), ContraseniaUsuario.getText()));
         }else{
             Notificacion.setText("Por favor llene todos los espacios");
