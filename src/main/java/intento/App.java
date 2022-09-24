@@ -20,11 +20,8 @@ public class App extends Application {
             //scene.getStylesheets().add(getClass().getResource("parchados.css").toExternalForm());
 
             // Le indicamos uno de los estilos que vamos a utilizar en el front-end
-            String css = this.getClass().getResource("parchados.css").toExternalForm();
-            scene.getStylesheets().add(css);
-            primaryStage.sizeToScene();
-            // Por algún motivo no es posible cargar el ícono
-            //primaryStage.getIcons().add(new Image("logoParche.png"));
+            // String css = this.getClass().getResource("parchados.css").toExternalForm();
+            primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("logoParche.png")));
             primaryStage.setTitle("Parchados");
             primaryStage.setScene(scene);
             primaryStage.show(); 
