@@ -44,6 +44,7 @@ public class PrimaryController {
                 ParchadosAppController controladorDelRegistro = loader.getController();
                 Usuarios usuario = l.ObtenerPorCedula(CedulaUsuario.getText());
                 controladorDelRegistro.mostrarNombre(usuario.getNombre());
+                controladorDelRegistro.usuarioGlobal = usuario;
                 
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
