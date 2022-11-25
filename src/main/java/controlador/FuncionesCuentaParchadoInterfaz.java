@@ -12,4 +12,5 @@ public interface FuncionesCuentaParchadoInterfaz {
     public void cargarUsuarios();
     public void leer();
     public boolean iniciarSesion(Usuarios usuarioxValidar);
+
 }

@@ -37,7 +37,7 @@ public class FuncionesCuentaParchado {
     }
 
     /**READ
-     *  Esta función recorre con un ciclo la lista de usuarios y la imprime en pantalla, se usó principalmente para pruebas
+     * Esta función recorre con un ciclo la lista de usuarios y la imprime en pantalla, se usó principalmente para pruebas
      * Es reemplazable, pero útil en caso de que deban realizarse modificaciones para hacer pruebas
      */
     public void leer(){
@@ -52,8 +52,10 @@ public class FuncionesCuentaParchado {
      * @param usuarioModificado
      */
     public void Actualizar(Usuarios usuarioModificado){
+        System.out.println("Hola");
         CRUDtxt bd = new CRUDtxt();
         bd.Update(usuarioModificado);
+        System.out.println("Hola");
         cargarUsuarios();
     }
     
