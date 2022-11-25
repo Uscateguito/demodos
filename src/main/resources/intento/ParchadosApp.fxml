@@ -7,20 +7,21 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #050a30; -fx-background-image: url('https://elcomercio.pe/resizer/D8_kW9BxSj6mzLDlwxrf9MvKcU8=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/Y3B5AKXDORGFVPEWBF7BJ5RBOE.jpg');" stylesheets="@parchados.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intento.ParchadosAppController">
    <children>
-      <Button layoutX="565.0" layoutY="489.0" mnemonicParsing="false" onAction="#ModificarDatos" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Modificar datos" />
-      <Text fill="WHITE" layoutX="489.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hola" textAlignment="CENTER" wrappingWidth="300.705078125">
+      <Button layoutX="564.0" layoutY="433.0" mnemonicParsing="false" onAction="#ModificarDatos" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Modificar datos" />
+      <Text fill="WHITE" layoutX="489.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hola" textAlignment="CENTER" wrappingWidth="300.705078125">
          <font>
             <Font name="Impact" size="100.0" />
          </font>
       </Text>
-      <Text fx:id="NombreUsuario" fill="WHITE" layoutX="490.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="300.705078125">
+      <Text fx:id="NombreUsuario" fill="WHITE" layoutX="490.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="300.705078125">
          <font>
             <Font size="40.0" />
          </font></Text>
-      <Text fill="WHITE" layoutX="490.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Esta aplicación todavía está creándose!" textAlignment="CENTER" wrappingWidth="300.705078125">
+      <Text fill="WHITE" layoutX="490.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Esta aplicación todavía está creándose!" textAlignment="CENTER" wrappingWidth="300.705078125">
          <font>
             <Font size="20.0" />
          </font></Text>
-      <Button layoutX="565.0" layoutY="553.0" mnemonicParsing="false" onAction="#Volver" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Log Out" />
+      <Button layoutX="598.0" layoutY="533.0" mnemonicParsing="false" onAction="#Volver" prefHeight="28.0" prefWidth="81.0" stylesheets="@parchados.css" text="Log Out" />
+      <Button layoutX="598.0" layoutY="584.0" mnemonicParsing="false" onAction="#EliminarCuenta" prefHeight="64.0" prefWidth="82.0" stylesheets="@parchados.css" text="Eliminar cuenta" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

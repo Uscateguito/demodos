@@ -52,8 +52,10 @@ public class FuncionesCuentaParchado {
      * @param usuarioModificado
      */
     public void Actualizar(Usuarios usuarioModificado){
+        System.out.println("Hola");
         CRUDtxt bd = new CRUDtxt();
         bd.Update(usuarioModificado);
+        System.out.println("Hola");
         cargarUsuarios();
     }
     

@@ -39,8 +39,6 @@ public class ModifyController {
 
     FuncionesCuentaParchado l = new FuncionesCuentaParchado();
 
-    public Usuarios usuarioXmodificar ;
-
     @FXML
     void regresar(ActionEvent event) {
         try {
@@ -61,15 +59,15 @@ public class ModifyController {
     @FXML
     void modificarBoton(ActionEvent event) {
         // Acciones de modificación.
-        if ( this.usuarioXmodificar != null ) {
-            if ( nombreUsuario.getText() != ""
-            || CedulaUsuario.getText() != ""
-            || CorreoUsuario.getText() != ""
-            || NuevaContraseniaUsuario.getText() != ""
+        if ( PrimaryController.usuario != null ) {
+            if ( !nombreUsuario.getText().isEmpty()
+            && !CedulaUsuario.getText().isEmpty()
+            && !CorreoUsuario.getText().isEmpty()
+            && !ContraseniaUsuario.getText().isEmpty()
             ) {
-                if ( ContraseniaUsuario.getText().equalsIgnoreCase(this.usuarioXmodificar.getContrasenia()) ) {
+                if ( ContraseniaUsuario.getText().equalsIgnoreCase(PrimaryController.usuario.getContrasenia()) ) {
                     cargarDatosFinales();
-                    l.Actualizar(this.usuarioXmodificar);
+                    l.Actualizar(PrimaryController.usuario);
                     System.out.println("modificación exitosa!");
                     Notificacion.setText("Modificación de datos exitosa");
                 }else{
@@ -86,16 +84,17 @@ public class ModifyController {
 
     public void cargarDatosIniciales () {
         // Colocar algunos datos del usuario en la modificación de datos.
-        CedulaUsuario.setText(this.usuarioXmodificar.getCedula());
-        CorreoUsuario.setText(this.usuarioXmodificar.getCorreoElectronico());
-        nombreUsuario.setText(this.usuarioXmodificar.getNombre());
+        CedulaUsuario.setText(PrimaryController.usuario.getCedula());
+        CorreoUsuario.setText(PrimaryController.usuario.getCorreoElectronico());
+        nombreUsuario.setText(PrimaryController.usuario.getNombre());
     }
 
     public void cargarDatosFinales () {
-        this.usuarioXmodificar.setCedula(CedulaUsuario.getText());
-        this.usuarioXmodificar.setNombre(nombreUsuario.getText());
-        this.usuarioXmodificar.setCorreoElectronico(CorreoUsuario.getText());
-        this.usuarioXmodificar.setContrasenia(NuevaContraseniaUsuario.getText());
+        PrimaryController.usuario.setCedula(CedulaUsuario.getText());        
+        PrimaryController.usuario.setNombre(nombreUsuario.getText());
+        PrimaryController.usuario.setCorreoElectronico(CorreoUsuario.getText());
+        if (!NuevaContraseniaUsuario.getText().isEmpty()||!NuevaContraseniaUsuario.getText().isBlank())
+            PrimaryController.usuario.setContrasenia(NuevaContraseniaUsuario.getText());
     }
 
 }

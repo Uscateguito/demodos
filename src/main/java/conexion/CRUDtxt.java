@@ -71,8 +71,10 @@ public class CRUDtxt {
         String LineaxActualizar = UsuarioxActualizar.getNombre() + ";" + UsuarioxActualizar.getCedula() + ";"
                     + UsuarioxActualizar.getCorreoElectronico()
                     + ";" + UsuarioxActualizar.getContrasenia();
-        String lineaActual = null;
 
+        System.out.println(LineaxActualizar);
+
+        String lineaActual = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(ArchivoOriginal));
                 BufferedWriter writer = new BufferedWriter(new FileWriter(ArchivoTemporal))) {
             // Usuario que queremos quitar

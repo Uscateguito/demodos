@@ -34,6 +34,8 @@ public class PrimaryController {
 
     FuncionesCuentaParchado l = new FuncionesCuentaParchado();
 
+    public static Usuarios usuario ;
+
     @FXML
     void LogIn(ActionEvent event) throws InfoIncompleta{
         try {
@@ -42,9 +44,8 @@ public class PrimaryController {
                 root = loader.load();
                 // Con este objeto puedo ejecutar los métodos del registroController
                 ParchadosAppController controladorDelRegistro = loader.getController();
-                Usuarios usuario = l.ObtenerPorCedula(CedulaUsuario.getText());
+                this.usuario = l.ObtenerPorCedula(CedulaUsuario.getText());
                 controladorDelRegistro.mostrarNombre(usuario.getNombre());
-                controladorDelRegistro.usuarioGlobal = usuario;
                 
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
