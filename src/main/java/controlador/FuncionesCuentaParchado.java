@@ -29,7 +29,7 @@ public class FuncionesCuentaParchado {
     public void crearUsuario(Usuarios UsuarioNuevo){
         if(ObtenerPorCedula(UsuarioNuevo.getCedula()) == null){
             UsuariosParchados.add(UsuarioNuevo);
-            CRUDtxt bd = new CRUDtxt();
+            CRUDtxt bd = CRUDtxt.getInstance();
             bd.Escribir(UsuarioNuevo);
         }else{
             System.out.println("El usuario ya está registrado");
@@ -53,7 +53,7 @@ public class FuncionesCuentaParchado {
      */
     public void Actualizar(Usuarios usuarioModificado){
         System.out.println("Hola");
-        CRUDtxt bd = new CRUDtxt();
+        CRUDtxt bd = CRUDtxt.getInstance();
         bd.Update(usuarioModificado);
         System.out.println("Hola");
         cargarUsuarios();
@@ -66,7 +66,7 @@ public class FuncionesCuentaParchado {
     public void EliminarPorCedula(String cedula){
         try {
             Usuarios x = ObtenerPorCedula(cedula);
-            CRUDtxt bd = new CRUDtxt();
+            CRUDtxt bd = CRUDtxt.getInstance();
             bd.Delete(x);
             cargarUsuarios(); 
         } catch (Exception e) {
@@ -102,7 +102,7 @@ public class FuncionesCuentaParchado {
      * en una linkedList
      */
     public static void cargarUsuarios(){
-        CRUDtxt bd = new CRUDtxt();
+        CRUDtxt bd = CRUDtxt.getInstance();
         UsuariosParchados = bd.obtener();
     }
 
