@@ -1,7 +1,7 @@
 package modelo;
 
 public class Usuarios {
-    
+
     private String nombre;
     private String Cedula;
     private String CorreoElectronico;
@@ -21,21 +21,27 @@ public class Usuarios {
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getCedula() {
         return Cedula;
     }
+
     public void setCedula(String cedula) {
         Cedula = cedula;
     }
+
     public String getCorreoElectronico() {
         return CorreoElectronico;
     }
+
     public void setCorreoElectronico(String correoElectronico) {
         CorreoElectronico = correoElectronico;
     }
+
     public String getContrasenia() {
         return contrasenia;
     }
@@ -43,7 +49,6 @@ public class Usuarios {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-    
 
     // toString ------------------------------------------
 
@@ -52,5 +57,13 @@ public class Usuarios {
         return "Usuarios [Cedula=" + Cedula + ", CorreoElectronico=" + CorreoElectronico + ", nombre=" + nombre + "]";
     }
 
-        
+    public Usuarios clone() {
+
+        Usuarios u;
+
+        u = new Usuarios(this.getNombre(), this.getCedula(), this.getCorreoElectronico(), this.getContrasenia());
+
+        return u;
+    }
+
 }
