@@ -10,11 +10,23 @@ import java.util.StringTokenizer;
 
 import modelo.Usuarios;
 
+//Implementacion patron Singleton UwU
 public class CRUDtxt {
+    private static CRUDtxt instance; 
 
+    private CRUDtxt() {
+    }
+    public static CRUDtxt getInstance(){
+        if (instance==null){
+            
+            instance= new CRUDtxt();
+        }
+        return instance;
+    }
     // CRUD ------------------------------
 
-    /**CREATE
+    /**
+     * CREATE
      * 
      * @param usuarioNuevo
      */
@@ -32,7 +44,8 @@ public class CRUDtxt {
         }
     }
 
-    /**READ
+    /**
+     * READ
      * 
      * @return
      */
@@ -58,7 +71,8 @@ public class CRUDtxt {
         return UsuarioNuevo;
     }
 
-    /**UPDATE
+    /**
+     * UPDATE
      * 
      * @param UsuarioxActualizar
      */
@@ -69,8 +83,8 @@ public class CRUDtxt {
         File ArchivoTemporal = new File("tempFile.txt");
 
         String LineaxActualizar = UsuarioxActualizar.getNombre() + ";" + UsuarioxActualizar.getCedula() + ";"
-                    + UsuarioxActualizar.getCorreoElectronico()
-                    + ";" + UsuarioxActualizar.getContrasenia();
+                + UsuarioxActualizar.getCorreoElectronico()
+                + ";" + UsuarioxActualizar.getContrasenia();
 
         System.out.println(LineaxActualizar);
 
@@ -91,14 +105,14 @@ public class CRUDtxt {
                 // aquí tiene mucho sentido porque el objetivo es justamente el de no escribir
                 // la línea que queremos quitar
 
-                if (cedula.equalsIgnoreCase(UsuarioxActualizar.getCedula())){
+                if (cedula.equalsIgnoreCase(UsuarioxActualizar.getCedula())) {
                     writer.write(LineaxActualizar + System.getProperty("line.separator"));
-                }else{
-                // System.getProperty("line.separator") es un separador espectacular, porque
-                // hace la separación adecuadamente
-                // independientemente del sistema operativo
-                writer.write(lineaActual + System.getProperty("line.separator"));
-                //System.out.println(lineaActual);
+                } else {
+                    // System.getProperty("line.separator") es un separador espectacular, porque
+                    // hace la separación adecuadamente
+                    // independientemente del sistema operativo
+                    writer.write(lineaActual + System.getProperty("line.separator"));
+                    // System.out.println(lineaActual);
                 }
             }
             writer.close();
@@ -112,7 +126,8 @@ public class CRUDtxt {
         }
     }
 
-    /**DELETE
+    /**
+     * DELETE
      * 
      * @param UsuarioARemover
      */
@@ -123,8 +138,8 @@ public class CRUDtxt {
         File ArchivoTemporal = new File("tempFile.txt");
 
         String lineaARemover = UsuarioARemover.getNombre() + ";" + UsuarioARemover.getCedula() + ";"
-                    + UsuarioARemover.getCorreoElectronico()
-                    + ";" + UsuarioARemover.getContrasenia();
+                + UsuarioARemover.getCorreoElectronico()
+                + ";" + UsuarioARemover.getContrasenia();
         String lineaActual = null;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(ArchivoOriginal));
@@ -140,14 +155,14 @@ public class CRUDtxt {
                 // aquí tiene mucho sentido porque el objetivo es justamente el de no escribir
                 // la línea que queremos quitar
 
-                if (trimmedLine.equalsIgnoreCase(lineaARemover)){
+                if (trimmedLine.equalsIgnoreCase(lineaARemover)) {
                     continue;
                 }
                 // System.getProperty("line.separator") es un separador espectacular, porque
                 // hace la separación adecuadamente
                 // independientemente del sistema operativo
                 writer.write(lineaActual + System.getProperty("line.separator"));
-                //System.out.println(lineaActual);
+                // System.out.println(lineaActual);
             }
             writer.close();
             reader.close();
@@ -159,4 +174,5 @@ public class CRUDtxt {
             // JOptionPane.showMessageDialog(null, "Se produjo un error");
         }
     }
+
 }
