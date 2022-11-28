@@ -5,5 +5,5 @@ Rigoberto;5;jiji;456
 Jose;6;asd;123
 Majito;7;c7;1234
 Alejo;1;c1;jojojo
-Miguelito;8;M1;123
-Andres;10;asd;123
+Miguelito;8;M1;456
+Andres;123;abc;123

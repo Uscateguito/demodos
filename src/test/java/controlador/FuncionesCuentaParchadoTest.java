@@ -1,6 +1,6 @@
 package controlador;
 
-import conexion.CRUDtxt;
+import conexion.CrudUsuarios;
 import modelo.Usuarios;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class FuncionesCuentaParchadoTest {
 
     @Test
     void test_crearUsuario () {
-        var aux = CRUDtxt.getInstance();
+        var aux = CrudUsuarios.getInstance();
         var tester = new FuncionesCuentaParchado();
         var usuario = new Usuarios("Aaa","1010","correo","contra") ;
         tester.crearUsuario(usuario);

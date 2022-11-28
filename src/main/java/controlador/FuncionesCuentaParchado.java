@@ -2,7 +2,8 @@ package controlador;
 
 import java.util.LinkedList;
 
-import conexion.CRUDtxt;
+import conexion.CrudUsuarios;
+import conexion.CrudUsuarios;
 import excepciones.InfoIncompleta;
 import modelo.Usuarios;
 
@@ -32,7 +33,7 @@ public class FuncionesCuentaParchado implements IFuncionesCuentaParchadoCompleta
     public void crearUsuario(Usuarios UsuarioNuevo){
         if(ObtenerPorCedula(UsuarioNuevo.getCedula()) == null){
             UsuariosParchados.add(UsuarioNuevo);
-            CRUDtxt bd = CRUDtxt.getInstance();
+            CrudUsuarios bd = CrudUsuarios.getInstance();
             bd.Escribir(UsuarioNuevo);
         }else{
             System.out.println("El usuario ya está registrado");
@@ -56,7 +57,7 @@ public class FuncionesCuentaParchado implements IFuncionesCuentaParchadoCompleta
      */
     public void Actualizar(Usuarios usuarioModificado){
         System.out.println("Hola");
-        CRUDtxt bd = CRUDtxt.getInstance();
+        CrudUsuarios bd = CrudUsuarios.getInstance();
         bd.Update(usuarioModificado);
         System.out.println("Hola");
         cargarUsuarios();
@@ -69,7 +70,7 @@ public class FuncionesCuentaParchado implements IFuncionesCuentaParchadoCompleta
     public void EliminarPorCedula(String cedula){
         try {
             Usuarios x = ObtenerPorCedula(cedula);
-            CRUDtxt bd = CRUDtxt.getInstance();
+            CrudUsuarios bd = CrudUsuarios.getInstance();
             bd.Delete(x);
             cargarUsuarios(); 
         } catch (Exception e) {
@@ -105,7 +106,7 @@ public class FuncionesCuentaParchado implements IFuncionesCuentaParchadoCompleta
      * en una linkedList
      */
     public static void cargarUsuarios(){
-        CRUDtxt bd = CRUDtxt.getInstance();
+        CrudUsuarios bd = CrudUsuarios.getInstance();
         UsuariosParchados = bd.obtener();
     }
 
