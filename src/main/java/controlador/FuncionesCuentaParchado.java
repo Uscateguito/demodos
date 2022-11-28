@@ -24,7 +24,7 @@ public class FuncionesCuentaParchado {
      * Esta función sirve para agregar un usuario a la base de datos, pero también a la lista
      * También sirve para validar si el usuario ya existe y necesariamente esto se hace con su documento de identificación nacional
      * lo último por motivos de seguridad
-     * @param UsuarioNuevo
+     * @param UsuarioNuevo Este parametro se usa para registrar a los usuarios
      */
     public void crearUsuario(Usuarios UsuarioNuevo){
         if(ObtenerPorCedula(UsuarioNuevo.getCedula()) == null){
@@ -49,7 +49,7 @@ public class FuncionesCuentaParchado {
     
     /**UPDATE
      * Aquí el usuario puede modificar sus datos
-     * @param usuarioModificado
+     * @param usuarioModificado Este parametro se usa para pasarle al usuario que se vaya a actualizar
      */
     public void Actualizar(Usuarios usuarioModificado){
         System.out.println("Hola");
@@ -61,7 +61,7 @@ public class FuncionesCuentaParchado {
     
     /**DELETE
      * Elimina a un usuario de la lista con base a su cédula
-     * @param cedula
+     * @param cedula Este parametro se usa para pasarle la cedula del usuario que se va a borrar 
      */
     public void EliminarPorCedula(String cedula){
         try {
@@ -77,7 +77,7 @@ public class FuncionesCuentaParchado {
 
     /**SIZEUSUARIOS
      * Retorna la cantidad de usuarios que tiene la app
-     * @return
+     * @return retorna la cantidad de usuarios registrados 
      */
     public int totalUsuarios(){
         return UsuariosParchados.size();
@@ -86,7 +86,7 @@ public class FuncionesCuentaParchado {
     /**ENCONTRAR USUARIO
      * Esta función busca un usuario en la lista a partir de su cédula, en caso de encontrarlo, retorna al usuario completo
      * @param cedula
-     * @return
+     * @return Retorna el usuario que coincida con la cedula.
      */
     public Usuarios ObtenerPorCedula(String cedula){
         for (Usuarios x : UsuariosParchados) {
@@ -110,9 +110,9 @@ public class FuncionesCuentaParchado {
     /**VALIDAR INICIO DE SESIÓN
      * Esta función sirve para evaluar al iniciar sesión que el usuario exista y además que su contraseña sea correcta,
      * le hace falta un hash para que la contraseña no quede guardada en texto plano
-     * @param cedula
-     * @param contrasenia
-     * @return
+     * @param cedula Este parametro es la cedula registrada por el usuario 
+     * @param contrasenia Este parametro es la contraseña que registro el usuario
+     * @return Si el usuario logro o no iniciar sesion
      * @throws InfoIncompleta
      */
     public boolean iniciarSesion(String cedula, String contrasenia) throws InfoIncompleta{
