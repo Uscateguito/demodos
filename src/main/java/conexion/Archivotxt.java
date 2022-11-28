@@ -10,13 +10,14 @@ public class Archivotxt {
 
     private String nombre;
 
+    
     public Archivotxt(String nombre) {
         this.nombre = nombre;
     }
 
     /**
      * Organiza un archivo de texto dentro de la memoria
-     * @return
+     * @return retorna una lista de lineas de texto del Archivo
      */
     public LinkedList<String> ObtenerTextodeArchivo() {
         LinkedList<String> lineasDeTexto = null;
