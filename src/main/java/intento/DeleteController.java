@@ -62,7 +62,7 @@ public class DeleteController {
 
     /**
      * Sirve para mostrar el nombre del usuario que entró a la app
-     * @param nombre
+     * @param nombre Nombre del usuario
      */
     public void mostrarNombre(String nombre){
         NombreUsuario.setText(nombre);
