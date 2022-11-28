@@ -12,6 +12,11 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
 
+    /**
+     * Arranca la aplicación de JavaFX
+     * @param primaryStage Esenario principal de la aplicación 
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         try {
@@ -30,6 +35,10 @@ public class App extends Application {
         }        
     }
 
+    /**
+     * Metodo principal de la aplicacion
+     * @param args Recibe los argumentos con los que se llama la aplicacion
+     */
     public static void main(String[] args) {
         launch(args);
     }
