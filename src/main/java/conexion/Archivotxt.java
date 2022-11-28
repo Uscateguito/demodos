@@ -44,7 +44,7 @@ public class Archivotxt {
 
     /**
      * Quita todas las líneas que quedan en blanco de un documento txt al hacerle alguna eliminación
-     * @param ArchivoOriginal
+     * @param ArchivoOriginal El Archivo original a ser limpiado 
      */
     public static void limpiar(File ArchivoOriginal) {
 
