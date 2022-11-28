@@ -54,9 +54,13 @@ public class Archivotxt {
                 PrintWriter writer = new PrintWriter(new FileWriter(ArchivoTemporal))) {
             String lineOfText = reader.readLine();
 
+            boolean salto_inciial = false;
             while (lineOfText != null) {
                 if (!lineOfText.isEmpty()) {
-                    writer.println(lineOfText);
+                    if (salto_inciial) 
+                        writer.write(System.getProperty("line.separator"));
+                    else salto_inciial = true;
+                    writer.write(lineOfText);
                 }
                 lineOfText = reader.readLine();
             }
