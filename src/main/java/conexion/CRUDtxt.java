@@ -13,7 +13,7 @@ import modelo.Lugares;
 import modelo.Usuarios;
 
 //Implementacion patron Singleton UwU
-public class CRUDtxt implements CrudUsuarios, CrudDeportes, CrudLugares{
+public class CRUDtxt{
 
     private static CRUDtxt instance; 
 
@@ -26,6 +26,7 @@ public class CRUDtxt implements CrudUsuarios, CrudDeportes, CrudLugares{
         }
         return instance;
     }
+
     // CRUD ------------------------------
 
     /**
@@ -177,50 +178,4 @@ public class CRUDtxt implements CrudUsuarios, CrudDeportes, CrudLugares{
             // JOptionPane.showMessageDialog(null, "Se produjo un error");
         }
     }
-    @Override
-    public void Escribir(Lugares usuarioNuevo) {
-        // TODO Auto-generated method stub
-        
-    }
-    @Override
-    public LinkedList<Lugares> obtenerLugares() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    @Override
-    public void Update(Lugares UsuarioxActualizar) {
-        // TODO Auto-generated method stub
-        
-    }
-    @Override
-    public void Delete(Lugares UsuarioARemover) {
-        // TODO Auto-generated method stub
-        
-    }
-    @Override
-    public void Escribir(Deportes usuarioNuevo) {
-        // TODO Auto-generated method stub
-        
-    }
-    @Override
-    public LinkedList<Deportes> obtenerDeportes() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    @Override
-    public void Update(Deportes UsuarioxActualizar) {
-        // TODO Auto-generated method stub
-        
-    }
-    @Override
-    public void Delete(Deportes UsuarioARemover) {
-        // TODO Auto-generated method stub
-        
-    }
-    @Override
-    public LinkedList<Usuarios> obtenerUsuarios() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
 }

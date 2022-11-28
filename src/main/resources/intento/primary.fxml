@@ -11,9 +11,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@parchados.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intento.PrimaryController">
    <children>
-      <Text fill="WHITE" layoutX="779.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Bebas Neue';" text="Inicia Sesión en Parchados" textAlignment="CENTER" wrappingWidth="388.1484375">
+      <Text fill="WHITE" layoutX="779.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicia Sesión en Parchados" textAlignment="CENTER" wrappingWidth="388.1484375">
          <font>
-            <Font size="71.0" />
+            <Font name="Impact" size="50.0" />
          </font>
       </Text>
       <TextField fx:id="CedulaUsuario" alignment="CENTER" layoutX="878.0" layoutY="361.0" promptText="Cedula" style="-fx-background-color: #050a30; -fx-text-fill: white; -fx-border-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
@@ -30,7 +30,7 @@
          </font></Button>
       <Button layoutX="879.0" layoutY="518.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="27.0" prefWidth="189.0" stylesheets="@parchados.css" text="Sign Up" />
       <Button layoutX="879.0" layoutY="584.0" mnemonicParsing="false" onAction="#OlvidoContrasenia" prefHeight="27.0" prefWidth="189.0" styleClass="button2" stylesheets="@parchados.css" text="¿Olvidaste tu contraseña?" textFill="WHITE" />
-      <Text fx:id="Notificacion" fill="WHITE" layoutX="778.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Bebas Neue';" text="Javerianapp" textAlignment="CENTER" wrappingWidth="388.1484375">
+      <Text fx:id="Notificacion" fill="WHITE" layoutX="778.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Bebas Neue';" text="JaverianApp" textAlignment="CENTER" wrappingWidth="388.1484375">
          <font>
             <Font size="27.0" />
          </font></Text>

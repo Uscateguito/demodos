@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #050a30; -fx-background-image: url('https://elcomercio.pe/resizer/D8_kW9BxSj6mzLDlwxrf9MvKcU8=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/Y3B5AKXDORGFVPEWBF7BJ5RBOE.jpg');" stylesheets="@parchados.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intento.ParchadosAppController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #050a30;" stylesheets="@parchados.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intento.ParchadosAppController">
    <children>
       <Button layoutX="564.0" layoutY="433.0" mnemonicParsing="false" onAction="#ModificarDatos" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Modificar datos" />
       <Text fill="WHITE" layoutX="489.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hola" textAlignment="CENTER" wrappingWidth="300.705078125">
@@ -21,7 +21,7 @@
          <font>
             <Font size="20.0" />
          </font></Text>
-      <Button layoutX="598.0" layoutY="533.0" mnemonicParsing="false" onAction="#Volver" prefHeight="28.0" prefWidth="81.0" stylesheets="@parchados.css" text="Log Out" />
-      <Button layoutX="598.0" layoutY="584.0" mnemonicParsing="false" onAction="#EliminarCuenta" prefHeight="64.0" prefWidth="82.0" stylesheets="@parchados.css" text="Eliminar cuenta" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="573.0" layoutY="636.0" mnemonicParsing="false" onAction="#Volver" prefHeight="34.0" prefWidth="134.0" stylesheets="@parchados.css" text="Log Out" />
+      <Button layoutX="573.0" layoutY="484.0" mnemonicParsing="false" onAction="#EliminarCuenta" prefHeight="34.0" prefWidth="134.0" stylesheets="@parchados.css" text="Eliminar cuenta" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

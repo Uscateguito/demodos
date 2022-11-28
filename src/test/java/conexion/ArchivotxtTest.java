@@ -9,7 +9,6 @@ class ArchivotxtTest {
     @Test
     void testArchivoTest () {
         Archivotxt tester = new Archivotxt("prueba.txt") ;
-        
         assertEquals("hola", tester.ObtenerTextodeArchivo().get(0));
     }
 

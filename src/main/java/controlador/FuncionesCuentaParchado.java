@@ -6,7 +6,10 @@ import conexion.CRUDtxt;
 import excepciones.InfoIncompleta;
 import modelo.Usuarios;
 
-public class FuncionesCuentaParchado implements FuncionesCuentaParchadoInterfaz {
+// Desde nuestra perspectiva, no es ideal crear una interfaz completa, sin embargo, como el programa se había hecho con esa asunción, para no cambiar
+// todo nuestro código, lo mantenemos
+
+public class FuncionesCuentaParchado implements IFuncionesCuentaParchadoCompleta {
     
     private static LinkedList<Usuarios> UsuariosParchados;
 

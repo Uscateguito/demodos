@@ -7,19 +7,19 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #050a30; -fx-background-image: url('https://elcomercio.pe/resizer/D8_kW9BxSj6mzLDlwxrf9MvKcU8=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/Y3B5AKXDORGFVPEWBF7BJ5RBOE.jpg');" stylesheets="@parchados.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intento.DeleteController">
    <children>
-      <Button layoutX="423.0" layoutY="504.0" mnemonicParsing="false" onAction="#Afirmativo" prefHeight="54.0" prefWidth="134.0" stylesheets="@parchados.css" text="SÍ">
+      <Button layoutX="423.0" layoutY="504.0" mnemonicParsing="false" onAction="#Afirmativo" prefHeight="22.0" prefWidth="134.0" stylesheets="@parchados.css" text="SÍ">
          <font>
             <Font size="27.0" />
          </font></Button>
-      <Text fill="WHITE" layoutX="55.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Estás seguro que deseas eliminar tu cuenta?" textAlignment="CENTER" wrappingWidth="1170.705078125">
+      <Text fill="WHITE" layoutX="223.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Estás seguro que deseas eliminar tu cuenta?" textAlignment="CENTER" wrappingWidth="813.9051513671875">
          <font>
-            <Font name="Impact" size="100.0" />
+            <Font name="Impact" size="32.0" />
          </font>
       </Text>
       <Text fx:id="NombreUsuario" fill="WHITE" layoutX="490.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="CENTER" wrappingWidth="300.705078125">
          <font>
             <Font size="40.0" />
          </font></Text>
-      <Button layoutX="723.0" layoutY="505.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="53.0" prefWidth="134.0" stylesheets="@parchados.css" text="NO" />
+      <Button layoutX="723.0" layoutY="505.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="9.0" prefWidth="134.0" stylesheets="@parchados.css" text="NO" />
    </children>
 </AnchorPane>

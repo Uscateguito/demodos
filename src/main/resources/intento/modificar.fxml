@@ -43,9 +43,9 @@
             <Image url="@basketps.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="453.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Bebas Neue';" text="Modificación de datos" textAlignment="CENTER" wrappingWidth="374.0">
+      <Text fill="WHITE" layoutX="453.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificación de datos" textAlignment="CENTER" wrappingWidth="374.0">
          <font>
-            <Font size="78.0" />
+            <Font name="Impact" size="56.0" />
          </font>
       </Text>
       <ImageView fitHeight="477.0" fitWidth="752.0" layoutX="42.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">

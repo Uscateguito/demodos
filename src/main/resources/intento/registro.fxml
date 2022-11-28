@@ -31,7 +31,7 @@
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <Button layoutX="565.0" layoutY="543.0" mnemonicParsing="false" onAction="#registroBoton" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Let's go!" />
+      <Button layoutX="565.0" layoutY="543.0" mnemonicParsing="false" onAction="#registroBoton" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Aceptar" />
       <Button layoutX="565.0" layoutY="589.0" mnemonicParsing="false" onAction="#Volver" prefHeight="27.0" prefWidth="151.0" stylesheets="@parchados.css" text="Back to main" />
       <ImageView fitHeight="364.0" fitWidth="496.0" layoutX="896.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -43,9 +43,9 @@
             <Image url="@basketps.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="451.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Bebas Neue';" text="Registro" textAlignment="CENTER" wrappingWidth="363.0">
+      <Text fill="WHITE" layoutX="451.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO" textAlignment="CENTER" wrappingWidth="363.0">
          <font>
-            <Font size="115.0" />
+            <Font name="Impact" size="50.0" />
          </font>
       </Text>
       <ImageView fitHeight="477.0" fitWidth="752.0" layoutX="42.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
@@ -53,7 +53,7 @@
             <Image url="@logoParche-removebg-preview.png" />
          </image>
       </ImageView>
-      <Text fx:id="Notificacion" fill="WHITE" layoutX="454.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Bebas Neue';" text="Javerianapp" textAlignment="CENTER" wrappingWidth="374.0">
+      <Text fx:id="Notificacion" fill="WHITE" layoutX="454.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javerianapp" textAlignment="CENTER" wrappingWidth="374.0">
          <font>
             <Font size="28.0" />
          </font></Text>
