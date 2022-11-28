@@ -22,11 +22,6 @@ public class ParchadosAppController {
 
     @FXML
     public Text NombreUsuario;
-    /**
-     * Vuelve a la pantalla inicial
-     * @param event
-     * @throws IOException
-    */
 
     FuncionesCuentaParchado l = new FuncionesCuentaParchado();
 
@@ -43,6 +38,10 @@ public class ParchadosAppController {
         stage.show();
     }
 
+    /**
+     * Vuelve a la pantalla inicial
+     * @param event 
+    */
     @FXML
     void Volver(ActionEvent event) {
         try {
@@ -75,7 +74,7 @@ public class ParchadosAppController {
 
     /**
      * Sirve para mostrar el nombre del usuario que entró a la app
-     * @param nombre
+     * @param nombre Es el nombre del usuario
      */
     public void mostrarNombre(String nombre){
         NombreUsuario.setText(nombre);
