@@ -10,7 +10,10 @@ public class Archivotxt {
 
     private String nombre;
 
-    
+    /**
+     * Constructor de la clase archivo
+     * @param nombre Este parametro indica el nombre del Archivo.txt 
+    */
     public Archivotxt(String nombre) {
         this.nombre = nombre;
     }
