@@ -8,15 +8,30 @@ import java.io.FileWriter;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+import modelo.Deportes;
+import modelo.Lugares;
 import modelo.Usuarios;
 
-public class CRUDtxt {
+//Implementacion patron Singleton UwU
+public class CRUDtxt implements CrudUsuarios, CrudDeportes, CrudLugares{
 
+    private static CRUDtxt instance; 
+
+    public CRUDtxt() {
+    }
+    public static CRUDtxt getInstance(){
+        if (instance==null){
+            
+            instance= new CRUDtxt();
+        }
+        return instance;
+    }
     // CRUD ------------------------------
 
-    /**CREATE
-     * 
-     * @param usuarioNuevo
+    /**
+     * CREATE
+     * Crear un usuario
+     * @param usuarioNuevo Este parametro es el nuevo usuario que se va a escribir en el archivo de texto
      */
     public void Escribir(Usuarios usuarioNuevo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("parchaditos.txt", true))) {
@@ -32,9 +47,10 @@ public class CRUDtxt {
         }
     }
 
-    /**READ
-     * 
-     * @return
+    /**
+     * READ
+     * Leer los usuarios
+     * @return Este parametro retorna una lista de usuarios nuevos 
      */
     public LinkedList<Usuarios> obtener() {
         // Se incerta el nombre del archivo que se requiere conectar
@@ -58,9 +74,10 @@ public class CRUDtxt {
         return UsuarioNuevo;
     }
 
-    /**UPDATE
-     * 
-     * @param UsuarioxActualizar
+    /**
+     * UPDATE
+     * Actualizar un usuario
+     * @param UsuarioxActualizar Este parametro se usa para pasarle al metodo los datos actualizados 
      */
     public void Update(Usuarios UsuarioxActualizar) {
 
@@ -69,8 +86,8 @@ public class CRUDtxt {
         File ArchivoTemporal = new File("tempFile.txt");
 
         String LineaxActualizar = UsuarioxActualizar.getNombre() + ";" + UsuarioxActualizar.getCedula() + ";"
-                    + UsuarioxActualizar.getCorreoElectronico()
-                    + ";" + UsuarioxActualizar.getContrasenia();
+                + UsuarioxActualizar.getCorreoElectronico()
+                + ";" + UsuarioxActualizar.getContrasenia();
 
         System.out.println(LineaxActualizar);
 
@@ -91,14 +108,14 @@ public class CRUDtxt {
                 // aquí tiene mucho sentido porque el objetivo es justamente el de no escribir
                 // la línea que queremos quitar
 
-                if (cedula.equalsIgnoreCase(UsuarioxActualizar.getCedula())){
+                if (cedula.equalsIgnoreCase(UsuarioxActualizar.getCedula())) {
                     writer.write(LineaxActualizar + System.getProperty("line.separator"));
-                }else{
-                // System.getProperty("line.separator") es un separador espectacular, porque
-                // hace la separación adecuadamente
-                // independientemente del sistema operativo
-                writer.write(lineaActual + System.getProperty("line.separator"));
-                //System.out.println(lineaActual);
+                } else {
+                    // System.getProperty("line.separator") es un separador espectacular, porque
+                    // hace la separación adecuadamente
+                    // independientemente del sistema operativo
+                    writer.write(lineaActual + System.getProperty("line.separator"));
+                    // System.out.println(lineaActual);
                 }
             }
             writer.close();
@@ -112,9 +129,10 @@ public class CRUDtxt {
         }
     }
 
-    /**DELETE
-     * 
-     * @param UsuarioARemover
+    /**
+     * DELETE
+     * Eliminar un usuario
+     * @param UsuarioARemover este parametro se usa para pasarle los datos del usuario que se van a remover
      */
     public void Delete(Usuarios UsuarioARemover) {
 
@@ -123,8 +141,8 @@ public class CRUDtxt {
         File ArchivoTemporal = new File("tempFile.txt");
 
         String lineaARemover = UsuarioARemover.getNombre() + ";" + UsuarioARemover.getCedula() + ";"
-                    + UsuarioARemover.getCorreoElectronico()
-                    + ";" + UsuarioARemover.getContrasenia();
+                + UsuarioARemover.getCorreoElectronico()
+                + ";" + UsuarioARemover.getContrasenia();
         String lineaActual = null;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(ArchivoOriginal));
@@ -140,14 +158,14 @@ public class CRUDtxt {
                 // aquí tiene mucho sentido porque el objetivo es justamente el de no escribir
                 // la línea que queremos quitar
 
-                if (trimmedLine.equalsIgnoreCase(lineaARemover)){
+                if (trimmedLine.equalsIgnoreCase(lineaARemover)) {
                     continue;
                 }
                 // System.getProperty("line.separator") es un separador espectacular, porque
                 // hace la separación adecuadamente
                 // independientemente del sistema operativo
                 writer.write(lineaActual + System.getProperty("line.separator"));
-                //System.out.println(lineaActual);
+                // System.out.println(lineaActual);
             }
             writer.close();
             reader.close();
@@ -159,4 +177,50 @@ public class CRUDtxt {
             // JOptionPane.showMessageDialog(null, "Se produjo un error");
         }
     }
+    @Override
+    public void Escribir(Lugares usuarioNuevo) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public LinkedList<Lugares> obtenerLugares() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public void Update(Lugares UsuarioxActualizar) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public void Delete(Lugares UsuarioARemover) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public void Escribir(Deportes usuarioNuevo) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public LinkedList<Deportes> obtenerDeportes() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+    @Override
+    public void Update(Deportes UsuarioxActualizar) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public void Delete(Deportes UsuarioARemover) {
+        // TODO Auto-generated method stub
+        
+    }
+    @Override
+    public LinkedList<Usuarios> obtenerUsuarios() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

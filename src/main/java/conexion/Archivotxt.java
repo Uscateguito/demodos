@@ -10,13 +10,17 @@ public class Archivotxt {
 
     private String nombre;
 
+    /**
+     * Constructor de la clase archivo
+     * @param nombre Este parametro indica el nombre del Archivo.txt 
+    */
     public Archivotxt(String nombre) {
         this.nombre = nombre;
     }
 
     /**
      * Organiza un archivo de texto dentro de la memoria
-     * @return
+     * @return retorna una lista de lineas de texto del Archivo
      */
     public LinkedList<String> ObtenerTextodeArchivo() {
         LinkedList<String> lineasDeTexto = null;
@@ -40,7 +44,7 @@ public class Archivotxt {
 
     /**
      * Quita todas las líneas que quedan en blanco de un documento txt al hacerle alguna eliminación
-     * @param ArchivoOriginal
+     * @param ArchivoOriginal El Archivo original a ser limpiado 
      */
     public static void limpiar(File ArchivoOriginal) {
 
@@ -50,9 +54,13 @@ public class Archivotxt {
                 PrintWriter writer = new PrintWriter(new FileWriter(ArchivoTemporal))) {
             String lineOfText = reader.readLine();
 
+            boolean salto_inciial = false;
             while (lineOfText != null) {
                 if (!lineOfText.isEmpty()) {
-                    writer.println(lineOfText);
+                    if (salto_inciial) 
+                        writer.write(System.getProperty("line.separator"));
+                    else salto_inciial = true;
+                    writer.write(lineOfText);
                 }
                 lineOfText = reader.readLine();
             }
