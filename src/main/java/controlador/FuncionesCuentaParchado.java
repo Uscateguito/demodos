@@ -14,7 +14,7 @@ public class FuncionesCuentaParchado {
         UsuariosParchados = usuariosParchados;
     }
 
-    /**INICIALIZADOR&CONSTRUCTOR
+    /**INICIALIZADORCONSTRUCTOR
      * No sólo es un constructor, también inicializa la lista
      */
     public FuncionesCuentaParchado() {
