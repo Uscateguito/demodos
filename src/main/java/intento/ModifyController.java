@@ -82,6 +82,9 @@ public class ModifyController {
         }
     }
 
+    /**
+     * Carga los datos iniciales del usuario
+     */
     public void cargarDatosIniciales () {
         // Colocar algunos datos del usuario en la modificación de datos.
         CedulaUsuario.setText(PrimaryController.usuario.getCedula());
@@ -89,6 +92,9 @@ public class ModifyController {
         nombreUsuario.setText(PrimaryController.usuario.getNombre());
     }
 
+    /**
+     * Carga los datos finales del usuario
+     */
     public void cargarDatosFinales () {
         PrimaryController.usuario.setCedula(CedulaUsuario.getText());        
         PrimaryController.usuario.setNombre(nombreUsuario.getText());
