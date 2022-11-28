@@ -27,8 +27,8 @@ public class CRUDtxt {
 
     /**
      * CREATE
-     * 
-     * @param usuarioNuevo
+     * Crear un usuario
+     * @param usuarioNuevo Este parametro es el nuevo usuario que se va a escribir en el archivo de texto
      */
     public void Escribir(Usuarios usuarioNuevo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("parchaditos.txt", true))) {
@@ -46,8 +46,8 @@ public class CRUDtxt {
 
     /**
      * READ
-     * 
-     * @return
+     * Leer los usuarios
+     * @return Este parametro retorna una lista de usuarios nuevos 
      */
     public LinkedList<Usuarios> obtener() {
         // Se incerta el nombre del archivo que se requiere conectar
@@ -73,8 +73,8 @@ public class CRUDtxt {
 
     /**
      * UPDATE
-     * 
-     * @param UsuarioxActualizar
+     * Actualizar un usuario
+     * @param UsuarioxActualizar Este parametro se usa para pasarle al metodo los datos actualizados 
      */
     public void Update(Usuarios UsuarioxActualizar) {
 
@@ -128,8 +128,8 @@ public class CRUDtxt {
 
     /**
      * DELETE
-     * 
-     * @param UsuarioARemover
+     * Eliminar un usuario
+     * @param UsuarioARemover este parametro se usa para pasarle los datos del usuario que se van a remover
      */
     public void Delete(Usuarios UsuarioARemover) {
 
