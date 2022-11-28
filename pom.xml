@@ -30,6 +30,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                 </configuration>
             </plugin>
             <plugin>
