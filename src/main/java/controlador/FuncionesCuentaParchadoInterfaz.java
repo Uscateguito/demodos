@@ -1,5 +1,6 @@
 package controlador;
 
+import excepciones.InfoIncompleta;
 import modelo.Usuarios;
 
 public interface FuncionesCuentaParchadoInterfaz {
@@ -9,8 +10,6 @@ public interface FuncionesCuentaParchadoInterfaz {
     public void Actualizar(Usuarios usuarioModificado);
     public int totalUsuarios();
     public Usuarios ObtenerPorCedula(String cedula);
-    public void cargarUsuarios();
     public void leer();
-    public boolean iniciarSesion(Usuarios usuarioxValidar);
-
+    public boolean iniciarSesion(String cedula, String contrasenia) throws InfoIncompleta;
 }

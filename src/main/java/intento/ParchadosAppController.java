@@ -3,6 +3,7 @@ package intento;
 import java.io.IOException;
 
 import controlador.FuncionesCuentaParchado;
+import controlador.FuncionesCuentaParchadoInterfaz;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import modelo.Usuarios;
 
 public class ParchadosAppController {
 
@@ -23,7 +23,8 @@ public class ParchadosAppController {
     @FXML
     public Text NombreUsuario;
 
-    FuncionesCuentaParchado l = new FuncionesCuentaParchado();
+    // Liskov Substitution aplicado
+    FuncionesCuentaParchadoInterfaz l = new FuncionesCuentaParchado();
 
     @FXML
     void ModificarDatos(ActionEvent event) throws IOException {

@@ -6,7 +6,7 @@ import conexion.CRUDtxt;
 import excepciones.InfoIncompleta;
 import modelo.Usuarios;
 
-public class FuncionesCuentaParchado {
+public class FuncionesCuentaParchado implements FuncionesCuentaParchadoInterfaz {
     
     private static LinkedList<Usuarios> UsuariosParchados;
 
